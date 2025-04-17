@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/emmanuel.canto/Desktop/college/DPRN2/U1/A1/A1.csproj": {}
+    "/home/oblivion/Desktop/college/DPRN2/DPRN2/U1/A1/A1.csproj": {}
   },
   "projects": {
-    "/Users/emmanuel.canto/Desktop/college/DPRN2/U1/A1/A1.csproj": {
+    "/home/oblivion/Desktop/college/DPRN2/DPRN2/U1/A1/A1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/emmanuel.canto/Desktop/college/DPRN2/U1/A1/A1.csproj",
+        "projectUniqueName": "/home/oblivion/Desktop/college/DPRN2/DPRN2/U1/A1/A1.csproj",
         "projectName": "A1",
-        "projectPath": "/Users/emmanuel.canto/Desktop/college/DPRN2/U1/A1/A1.csproj",
-        "packagesPath": "/Users/emmanuel.canto/.nuget/packages/",
-        "outputPath": "/Users/emmanuel.canto/Desktop/college/DPRN2/U1/A1/obj/",
+        "projectPath": "/home/oblivion/Desktop/college/DPRN2/DPRN2/U1/A1/A1.csproj",
+        "packagesPath": "/home/oblivion/.nuget/packages/",
+        "outputPath": "/home/oblivion/Desktop/college/DPRN2/DPRN2/U1/A1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/emmanuel.canto/.nuget/NuGet/NuGet.Config"
+          "/home/oblivion/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -58,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.408/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/oblivion/.dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
