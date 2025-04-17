@@ -1,5 +1,1 @@
-using System;
-
-class Activity {
-
-}
+Console.WriteLine("Hola Mundo!");
