@@ -12,8 +12,7 @@ class Actividad
   }
 }
 
-class GlimmerCard
-{
+class Glimmer {
   private int inkCost;
   private bool hasInkWellSymbol;
   private string color;
@@ -85,7 +84,7 @@ class GlimmerCard
     set { loreValue = value; }
   }
 
-  public GlimmerCard(int inkCost, bool hasInkWellSymbol, string color, string name, string version, string[] classifications, string ability, int? strength, int? willpower, int? loreValue)
+  public Glimmer(int inkCost, bool hasInkWellSymbol, string color, string name, string version, string[] classifications, string ability, int? strength, int? willpower, int? loreValue)
   {
     this.inkCost = inkCost;
     this.hasInkWellSymbol = hasInkWellSymbol;
@@ -99,7 +98,7 @@ class GlimmerCard
     this.loreValue = loreValue;
   }
 
-  public GlimmerCard(string name, int inkCost)
+  public Glimmer(string name, int inkCost)
   {
     this.name = name;
     this.inkCost = inkCost;
@@ -135,7 +134,7 @@ class GlimmerCard
     Console.WriteLine($"La habilidad del Glimmer '{name}' ha sido activada: {ability}");
   }
 
-  public void Desafiar(GlimmerCard objetivo)
+  public void Desafiar(Glimmer objetivo)
   {
     Console.WriteLine($"El Glimmer '{name}' desafía al Glimmer '{objetivo.Name}'.");
   }
