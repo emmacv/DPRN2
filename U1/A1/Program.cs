@@ -3,16 +3,41 @@ using System.Collections.Specialized;
 
 class Actividad
 {
-
-
-
   static void Main(string[] args)
   {
-    Console.WriteLine("Hola Mundo!");
+    Glimmer glimmer1 = new(3, true, "Rojo", "Tigger", "One of a kind", ["Tigger", "Dreamborn"], "Whether you play an action, this character gets +2 this turn", 5, 4, 2);
+    Glimmer glimmer2 = new("Ariel", 2) {
+      HasInkWellSymbol = true,
+      Color = "Azul",
+      Version = "Sonic Warrior",
+      Classifications = ["Princess", "Hero", "Floodborn"],
+      Ability = "Shift 4(you may pay 4 ink to play this card as a different character with the same name)",
+      Strength = 3,
+      Willpower = 5,
+      LoreValue = 4
+    };
+
+    glimmer1.MostrarInformacion();
+    glimmer2.MostrarInformacion();
+
+    glimmer1.RecibirDaño(2);
+    glimmer1.ActivarHabilidad();
+    glimmer1.Desafiar(glimmer2);
+    glimmer1.Ejercer();
+    glimmer1.Listo();
+    glimmer1.MostrarInformacion();
+
+    glimmer2.RecibirDaño(3);
+    glimmer2.ActivarHabilidad();
+    glimmer2.Desafiar(glimmer1);
+    glimmer2.Ejercer();
+    glimmer2.Listo();
+    glimmer2.MostrarInformacion();
   }
 }
 
-class Glimmer {
+class Glimmer
+{
   private int inkCost;
   private bool hasInkWellSymbol;
   private string color;
@@ -105,7 +130,7 @@ class Glimmer {
     hasInkWellSymbol = false;
     color = "Unknown";
     version = "1.0";
-    classifications = new string[] { "Default" };
+    classifications = ["Default"];
     ability = "None";
     strength = null;
     willpower = null;
