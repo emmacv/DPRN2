@@ -1,0 +1,36 @@
+@startuml clases
+
+class Microorganismo {
+    - Nombre : string
+    - ClasificacionTaxonomica : string
+    - FuncionBiologica : string
+    - SecuenciaGenetica : string
+    - Abundancia : float
+
+    + Microorganismo(nombre : string, clasificacion : string, funcion : string, secuencia : string, abundancia : float)
+    + CompararMicroorganismos(otro : Microorganismo) : string
+    + ModificarAbundancia(nuevaAbundancia : float) : string
+    + MostrarInformacionDetallada() : void
+    + SimularInteraccionMicrobiana(otro : Microorganismo) : string
+    + ClonarMicroorganismo() : Microorganismo
+}
+
+class ProgramaPrincipal {
+    + Main() : void
+}
+
+class MenuInteractivo {
+    - Microorganismo : [Microorganismo]
+    - MostrarMenu(): void
+    - AgregarMicroorganismo(): void
+    - ModificarAbundancia(): void
+    - CompararMicroorganismos(): void
+    - SimularInteraccion(): void
+    - ClonarMicroorganismo(): void
+}
+
+
+ProgramaPrincipal --> MenuInteractivo : Usa
+MenuInteractivo --> Microorganismo: Usa
+
+@enduml

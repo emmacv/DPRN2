@@ -1,0 +1,27 @@
+@startuml caso de uso
+left to right direction
+actor Biologo
+
+package "Sistema de Gestión de Microorganismos" {
+    usecase "Comparar Microorganismos" as UC1
+    usecase "Modificar Abundancia" as UC2
+    usecase "Mostrar Información Detallada" as UC3
+    usecase "Simular Interacción Microbiana" as UC4
+    usecase "Clonar Microorganismo" as UC5
+    usecase "Gestionar con Menú Interactivo" as UC6
+}
+
+Biologo --> UC1
+Biologo --> UC2
+Biologo --> UC3
+Biologo --> UC4
+Biologo --> UC5
+Biologo --> UC6
+
+UC6 --> UC1 : incluye
+UC6 --> UC2 : incluye
+UC6 --> UC3 : incluye
+UC6 --> UC4 : incluye
+UC6 --> UC5 : incluye
+
+@enduml

@@ -267,7 +267,9 @@ public class Microorganismo
         float diferenciaAbundancia = Math.Abs(this.Abundancia - otro.Abundancia);
         bool efectoAbundancia = diferenciaAbundancia > 0.5f;
 
-        string resultado = "Resultado de interacción:\nRelación entre microorganismos: ";
+        string resultado = """Resultado de interacción:
+            Relación entre microorganismos:
+            """;
 
         if (mismaFilo || esSimbiosis)
         {
@@ -349,6 +351,6 @@ public class Microorganismo
 
     }
 
-    public Microorganismo ClonarMicroorganismo() => new Microorganismo(Nombre, Tipo, FuncionBiologica, SecuenciaGenetica, Abundancia);
+    public Microorganismo ClonarMicroorganismo() => new Microorganismo(this.Nombre, this.Tipo, this.FuncionBiologica, this.SecuenciaGenetica, Abundancia);
 }
 
