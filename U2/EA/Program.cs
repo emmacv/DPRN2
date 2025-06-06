@@ -167,6 +167,8 @@ class MenuInteractivo
 
   public void Iniciar()
   {
+    bool nombreValido = false;
+    do {
 
       Console.Write("Nombre de la imagen: ");
       string nombre = Console.ReadLine();
@@ -176,8 +178,10 @@ class MenuInteractivo
       if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(cadena))
       {
         Console.WriteLine("Nombre o cadena de imagen no pueden estar vacíos.");
-        return;
+        continue;
       }
+      nombreValido = true;
+    } while (!nombreValido);
 
       var imagen = new Imagen(nombre, cadena);
     do
