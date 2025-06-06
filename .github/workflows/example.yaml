@@ -1,0 +1,40 @@
+name: "Hola mundo"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hola mundo desde GitHub Actions"
+      - run: echo "Correr migraciones"
+      - run: echo "Correr seeders"
+      - run: echo "Correr tests"
+      - run: echo "Desplegar aplicación"
+      - run: echo "Desplegar base de datos"
+      - run: echo "Desplegar cache"
+      - run: echo "Desplegar colas"
+      - run: echo "Desplegar archivos estáticos"
+      - run: echo "Desplegar archivos de configuración"
+      - run: echo "Desplegar archivos de logs"
+      - run: echo "Desplegar archivos de seguridad"
+      - run: echo "Desplegar archivos de monitoreo"
+      - run: echo "Desplegar archivos de documentación"
+      - run: echo "Desplegar archivos de pruebas"
+      - run: echo "Desplegar archivos de desarrollo"
+      - run: echo "Desplegar archivos de producción"
+      - run: echo "Desplegar archivos de staging"
+      - run: echo "Desplegar archivos de testing"
+      - run: echo "Desplegar archivos de preproducción"
+      - run: echo "Desplegar archivos de postproducción"
+      - run: echo "Desplegar archivos de backup"
+      - run: echo "Desplegar archivos de restauración"
+      - run: echo "Desplegar archivos de migración"
+      - run: echo "Desplegar archivos de seed"
+      - run: echo "Desplegar archivos de test"
+      - run: echo "Desplegar archivos de desarrollo local"
+      - run: echo "Desplegar archivos de producción local"
+      - run: echo "done"
