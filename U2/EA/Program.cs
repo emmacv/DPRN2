@@ -18,16 +18,13 @@ class Imagen(string nombre, string cadena)
 }
 
 // Clase base
-class Filtro(Imagen imagen)
+abstract class Filtro(Imagen imagen)
 {
   public string NombreImagen { get; set; } = imagen.Nombre;
   public string CadenaImagen { get; set; } = imagen.Cadena;
   public string ImagenOriginal { get; private set; } = imagen.Cadena;
 
-  public virtual void AplicarFiltro()
-  {
-    Console.WriteLine("Filtro base aplicado.");
-  }
+  public virtual void AplicarFiltro();
 
   public virtual string RevertirFiltro()
   {
@@ -168,14 +165,18 @@ class MenuInteractivo
   public void Iniciar()
   {
     bool nombreValido = false;
-    do {
+    string cadenaValida = string.Empty;
+    string nombreImagen = string.Empty;
+
+    do
+    {
 
       Console.Write("Nombre de la imagen: ");
-      string nombre = Console.ReadLine();
-      Console.Write("Cadena representativa de la imagen: ");
-      string cadena = Console.ReadLine();
+      nombreImagen = Console.ReadLine();
+      Console.Write("Cadena representativa de la imagen (deben ser numeros entre 7 y 9 sin espacios): ");
+      cadenaValida = Console.ReadLine();
 
-      if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(cadena))
+      if (string.IsNullOrWhiteSpace(nombreImagen) || string.IsNullOrWhiteSpace(cadenaValida))
       {
         Console.WriteLine("Nombre o cadena de imagen no pueden estar vacíos.");
         continue;
@@ -183,7 +184,7 @@ class MenuInteractivo
       nombreValido = true;
     } while (!nombreValido);
 
-      var imagen = new Imagen(nombre, cadena);
+      var imagen = new Imagen(nombreImagen, cadenaValida);
     do
     {
       Console.WriteLine("""
@@ -237,12 +238,12 @@ class MenuInteractivo
           int tipo = int.Parse(Console.ReadLine());
           if (tipo == 1)
           {
-            hibrido.AplicarFiltro(cadena.ToCharArray());
+            hibrido.AplicarFiltro(cadenaValida.ToCharArray());
             imagen.Cadena = hibrido.CadenaImagen;
           }
           else
           {
-            char[] arreglo = cadena.ToCharArray();
+            char[] arreglo = cadenaValida.ToCharArray();
             hibrido.AplicarFiltro(arreglo);
             imagen.Cadena = new string(arreglo);
           }
