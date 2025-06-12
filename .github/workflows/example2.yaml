@@ -11,11 +11,11 @@ jobs:
     steps:
       - name: "Run a one-line script"
         run: echo "Hello, world!"
-      - name: "Run a script that fails"
-        run: cat not_existing.txt
 
   second_job:
     needs: first_job
+    env:
+      EXAMPLE_VAR: "example_value"
     runs-on: ubuntu-latest
     steps:
       - name: "Run another one-line script"
