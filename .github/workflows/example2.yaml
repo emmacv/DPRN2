@@ -61,4 +61,12 @@ jobs:
         run: cat example_file.txt
       - name: "Run a script that uses the artifact"
         run: echo "Using the downloaded artifact in a script."
-
+  fifth_job:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        message: [ "Hello", "World", "from", "GitHub", "Actions" ]
+    steps:
+      - name: "Uses strategy to run multiple steps"
+        run: echo ${{ matrix.message }}
