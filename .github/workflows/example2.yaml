@@ -50,7 +50,7 @@ jobs:
           name: example_file
           path: example_file.txt
   fourth_job:
-    needs: [third_job]
+    needs: third_job
     runs-on: ubuntu-latest
     steps:
       - name: "Download the artifact from third job"
