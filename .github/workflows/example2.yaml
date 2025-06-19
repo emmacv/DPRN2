@@ -49,4 +49,16 @@ jobs:
         with:
           name: example_file
           path: example_file.txt
+  fourth_job:
+    needs: [third_job]
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Download the artifact from third job"
+        uses: actions/download-artifact@v4
+        with:
+          name: example_file
+      - name: "Display the downloaded file"
+        run: cat example_file.txt
+      - name: "Run a script that uses the artifact"
+        run: echo "Using the downloaded artifact in a script."
 
